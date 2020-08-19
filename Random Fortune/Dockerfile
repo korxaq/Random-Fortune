@@ -6,8 +6,8 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["Random Fortune.csproj", "Random Fortune/"]
-RUN dotnet restore "Random Fortune.csproj"
+COPY ["/", "Random Fortune/"]
+RUN dotnet restore "Random Fortune/Random Fortune.csproj"
 COPY . .
 WORKDIR "/src/Random Fortune"
 RUN dotnet build "Random Fortune.csproj" -c Release -o /app/build
