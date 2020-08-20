@@ -30,5 +30,6 @@ stages:
       inputs:
         command: buildAndPush
         dockerfile: '$(Build.SourcesDirectory)/Random Fortune/Dockerfile'
+        repository: korxaq/korxaq-docker-repository
         tags: |
           $(tag)
